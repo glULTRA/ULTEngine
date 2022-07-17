@@ -2,3 +2,6 @@
 *.opensdf
 .git
 .vs
+.vs/
+/bin/
+/bin-int/
