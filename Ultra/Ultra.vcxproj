@@ -147,6 +147,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Ultra\Events\Events.h" />
     <ClInclude Include="src\Ultra\Log.h" />
     <ClInclude Include="src\Ultra.h" />
     <ClInclude Include="src\Ultra\Application.h" />
