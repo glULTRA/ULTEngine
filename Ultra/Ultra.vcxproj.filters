@@ -17,6 +17,7 @@
       <Filter>Ultra</Filter>
     </ClInclude>
     <ClInclude Include="src\Ultra\Log.h" />
+    <ClInclude Include="src\Ultra\Events\Events.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ultra\Application.cpp">
