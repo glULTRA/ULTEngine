@@ -147,12 +147,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Ultra\Log.h" />
     <ClInclude Include="src\Ultra.h" />
     <ClInclude Include="src\Ultra\Application.h" />
     <ClInclude Include="src\Ultra\Core.h" />
     <ClInclude Include="src\Ultra\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Ultra\Log.cpp" />
     <ClCompile Include="src\Ultra\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

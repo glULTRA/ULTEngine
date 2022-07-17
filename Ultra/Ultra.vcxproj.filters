@@ -16,10 +16,12 @@
     <ClInclude Include="src\Ultra\EntryPoint.h">
       <Filter>Ultra</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ultra\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ultra\Application.cpp">
       <Filter>Ultra</Filter>
     </ClCompile>
+    <ClCompile Include="src\Ultra\Log.cpp" />
   </ItemGroup>
 </Project>
