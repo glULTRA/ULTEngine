@@ -8,7 +8,7 @@ namespace Ultra {
 	void Application::Run()
 	{
 		WindowResizeEvent e(1280, 768);
-		if(e.GetCategoryFlags() == EventCategoryApplication)
+		if(e.IsInCategory(EventCategoryApplication))
 			ULT_TRACE(e.ToString());
 		while (true);
 	}
