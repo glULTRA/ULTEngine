@@ -1,0 +1,3 @@
+[submodule "Ultra/vendor/spdlog"]
+	path = Ultra/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
