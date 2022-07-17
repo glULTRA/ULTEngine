@@ -4,9 +4,6 @@
     <Filter Include="Ultra">
       <UniqueIdentifier>{6D583E0E-D96C-66BF-A2EE-091F0EC262F0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Ultra\Events">
-      <UniqueIdentifier>{B1A728E1-9D0A-B885-4690-F03B32D28308}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Ultra.h" />
@@ -19,28 +16,16 @@
     <ClInclude Include="src\Ultra\EntryPoint.h">
       <Filter>Ultra</Filter>
     </ClInclude>
-    <ClInclude Include="src\Ultra\Events\Event.h">
-      <Filter>Ultra\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Ultra\Events\Events.h">
-      <Filter>Ultra\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Ultra\Events\KeyEvent.h">
-      <Filter>Ultra\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Ultra\Events\MouseEvent.h">
-      <Filter>Ultra\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Ultra\Log.h">
-      <Filter>Ultra</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Ultra\Log.h" />
+    <ClInclude Include="src\Ultra\Events\Event.h" />
+    <ClInclude Include="src\Ultra\Events\KeyEvent.h" />
+    <ClInclude Include="src\Ultra\Events\MouseEvent.h" />
+    <ClInclude Include="src\Ultra\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ultra\Application.cpp">
       <Filter>Ultra</Filter>
     </ClCompile>
-    <ClCompile Include="src\Ultra\Log.cpp">
-      <Filter>Ultra</Filter>
-    </ClCompile>
+    <ClCompile Include="src\Ultra\Log.cpp" />
   </ItemGroup>
 </Project>
