@@ -25,7 +25,6 @@ namespace Ultra {
 #define ULT_CORE_INFO(...)		Ultra::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define ULT_CORE_TRACE(...)		Ultra::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define ULT_CORE_CRITICAL(...)	Ultra::Log::GetCoreLogger()->critical(__VA_ARGS__)
-#define ULT_CORE_ASSERT(...)	Ultra::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros.
 #define ULT_ERROR(...)			Ultra::Log::GetClientLogger()->error(__VA_ARGS__)

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Core.h"
-#include "Events/ApplicationEvent.h"
-#include "Log.h"
+#include "Events/Event.h"
+#include "Window.h"
 
 namespace Ultra {
 
@@ -12,6 +12,10 @@ namespace Ultra {
 		Application();
 		void Run();
 		~Application();
+
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
 	Application* createApplication();
