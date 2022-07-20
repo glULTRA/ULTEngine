@@ -147,6 +147,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\ultpch.h" />
     <ClInclude Include="src\Ultra.h" />
     <ClInclude Include="src\Ultra\Application.h" />
     <ClInclude Include="src\Ultra\Core.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="src\Ultra\Log.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ultpch.cpp" />
     <ClCompile Include="src\Ultra\Application.cpp" />
     <ClCompile Include="src\Ultra\Log.cpp" />
   </ItemGroup>

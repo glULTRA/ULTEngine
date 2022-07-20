@@ -16,6 +16,9 @@ project "Ultra"
 	language "C++"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "ultpch.h"
+	pchsource "Ultra/src/ultpch.cpp"
 	
 	files{
 		"%{prj.name}/src/**.h",

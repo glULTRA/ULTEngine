@@ -34,6 +34,7 @@
     <ClInclude Include="src\Ultra\Log.h">
       <Filter>Ultra</Filter>
     </ClInclude>
+    <ClInclude Include="src\ultpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ultra\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Ultra\Log.cpp">
       <Filter>Ultra</Filter>
     </ClCompile>
+    <ClCompile Include="src\ultpch.cpp" />
   </ItemGroup>
 </Project>
