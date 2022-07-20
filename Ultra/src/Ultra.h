@@ -5,6 +5,7 @@
 
 // Application.
 #include "Ultra/Application.h"
+#include "Ultra/Layer.h"
 #include "Ultra/Log.h"
 
 // The entry point.
