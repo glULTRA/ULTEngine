@@ -87,13 +87,14 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;gdi32.lib;shell32.lib;msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Ultra\Ultra.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -113,13 +114,14 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;gdi32.lib;shell32.lib;msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Release-windows-x86_64\Ultra\Ultra.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -139,13 +141,14 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;gdi32.lib;shell32.lib;msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Dist-windows-x86_64\Ultra\Ultra.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -162,6 +165,8 @@
     <ClInclude Include="src\Ultra\Events\Event.h" />
     <ClInclude Include="src\Ultra\Events\KeyEvent.h" />
     <ClInclude Include="src\Ultra\Events\MouseEvent.h" />
+    <ClInclude Include="src\Ultra\Layer.h" />
+    <ClInclude Include="src\Ultra\LayerStack.h" />
     <ClInclude Include="src\Ultra\Log.h" />
     <ClInclude Include="src\Ultra\Window.h" />
     <ClInclude Include="src\ultpch.h" />
@@ -169,6 +174,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Ultra\Application.cpp" />
+    <ClCompile Include="src\Ultra\Layer.cpp" />
+    <ClCompile Include="src\Ultra\LayerStack.cpp" />
     <ClCompile Include="src\Ultra\Log.cpp" />
     <ClCompile Include="src\ultpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

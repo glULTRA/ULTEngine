@@ -40,6 +40,12 @@
     <ClInclude Include="src\Ultra\Events\MouseEvent.h">
       <Filter>Ultra\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ultra\Layer.h">
+      <Filter>Ultra</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ultra\LayerStack.h">
+      <Filter>Ultra</Filter>
+    </ClInclude>
     <ClInclude Include="src\Ultra\Log.h">
       <Filter>Ultra</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Ultra\Application.cpp">
+      <Filter>Ultra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ultra\Layer.cpp">
+      <Filter>Ultra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ultra\LayerStack.cpp">
       <Filter>Ultra</Filter>
     </ClCompile>
     <ClCompile Include="src\Ultra\Log.cpp">
