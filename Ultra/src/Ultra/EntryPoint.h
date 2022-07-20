@@ -1,5 +1,3 @@
-#include  <iostream>
-
 #ifdef ULT_PLATFORM_WINDOWS
 
 extern Ultra::Application* createApplication();
