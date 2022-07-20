@@ -14,9 +14,9 @@ namespace Ultra {
 		inline float GetX() { return m_MouseX; };
 		inline float GetY() { return m_MouseY; };
 
-		std::string ToString() {
+		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseMovedEvent(" << GetX() << ", " << GetY() << ")";
+			ss << "MouseMovedEvent(" << m_MouseX << ", " <<  m_MouseY << ")";
 			return ss.str();
 		}
 
