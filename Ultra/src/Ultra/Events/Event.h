@@ -1,8 +1,6 @@
 #pragma once
 
 #include "Ultra/Core.h"
-#include <functional>
-#include <sstream>
 
 namespace Ultra {
 
