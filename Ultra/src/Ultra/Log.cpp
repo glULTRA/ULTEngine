@@ -1,3 +1,4 @@
+#include "ultpch.h"
 #include "Log.h"
 
 namespace  Ultra
