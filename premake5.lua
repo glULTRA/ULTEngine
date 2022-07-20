@@ -39,8 +39,7 @@ project "Ultra"
 		"GLFW",
 		"opengl32.lib",
 		"gdi32.lib",
-		"shell32.lib",
-		"msvcrtd.lib"
+		"shell32.lib"
 	}
 
 	filter "system:windows"
@@ -58,12 +57,15 @@ project "Ultra"
 		}
 	filter "configurations:Debug"
 		defines "ULT_DEBUG"
+		buildoptions "/MDd"
 		optimize  "On"
 	filter "configurations:Release"
 		defines "ULT_RELEASE"
+		buildoptions "/MD"
 		optimize  "On"
 	filter "configurations:Dist"
 		defines "ULT_DIST"
+		buildoptions "/MD"
 		optimize  "On"
 
 project "SandBox"
@@ -99,10 +101,13 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "ULT_DEBUG"
+		buildoptions "/MDd"
 		optimize  "On"
 	filter "configurations:Release"
 		defines "ULT_RELEASE"
+		buildoptions "/MD"
 		optimize  "On"
 	filter "configurations:Dist"
 		defines "ULT_DIST"
+		buildoptions "/MD"
 		optimize  "On"
