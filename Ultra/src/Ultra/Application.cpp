@@ -1,6 +1,7 @@
 #include "ultpch.h"
 #include "Application.h"
 #include "GLFW/glfw3.h"
+#include "Platform/Windows/WindowsWindow.h"
 
 namespace Ultra {
 
@@ -14,7 +15,7 @@ namespace Ultra {
 
 	void Application::Run()
 	{
-		while (m_Running) {
+		while (m_Running && m_Window->IsRunning()) {
 			glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
@@ -34,7 +35,7 @@ namespace Ultra {
 	}
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{
-		m_Running = false;
+		//m_Running = false;
 		return true;
 	}
 }

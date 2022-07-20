@@ -23,6 +23,8 @@ namespace Ultra {
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 
+		bool IsRunning() const override { return !glfwWindowShouldClose(m_Window); };
+
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();

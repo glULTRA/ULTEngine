@@ -80,7 +80,7 @@ namespace Ultra {
 					{
 						KeyPressedEvent e(key, 0);
 						if (key == 256) {
-							glfwSetWindowShouldClose(window, true); // how ?
+							glfwSetWindowShouldClose(window, true);
 						}
 						data.EventCallback(e);
 						break;
