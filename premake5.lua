@@ -37,7 +37,10 @@ project "Ultra"
 
 	links{
 		"GLFW",
-		"opengl32.lib"
+		"opengl32.lib",
+		"gdi32.lib",
+		"shell32.lib",
+		"msvcrtd.lib"
 	}
 
 	filter "system:windows"
