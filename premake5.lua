@@ -11,8 +11,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Ultra/vendor/GLFW/include"
+IncludeDir["Glad"] = "Ultra/vendor/Glad/include"
 
 include "Ultra/vendor/GLFW"
+include "Ultra/vendor/Glad"
 
 project "Ultra"
 	location "Ultra"
@@ -32,11 +34,13 @@ project "Ultra"
 	includedirs{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"gdi32.lib",
 		"shell32.lib"
@@ -49,7 +53,8 @@ project "Ultra"
 
 		defines{
 			"ULT_PLATFORM_WINDOWS",
-			"ULT_BUILD_DLL"
+			"ULT_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands{
