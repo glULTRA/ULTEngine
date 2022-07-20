@@ -4,6 +4,8 @@
 #include "Ultra/Events/KeyEvent.h"
 #include "Ultra/Events/MouseEvent.h"
 
+#include <glad/glad.h>
+
 namespace Ultra {
 	static bool s_GLFWInitialized = false;
 
@@ -43,11 +45,17 @@ namespace Ultra {
 
 		if (!m_Window)
 		{
-			ULT_CORE_CRITICAL("Could not create a window");
+			ULT_CORE_ERROR("Could not create a window");
 			glfwTerminate();
 		}
 
 		glfwMakeContextCurrent(m_Window);
+
+		// OpenGL Loader.
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+			ULT_CORE_ERROR("Failed to initialize OpenGL context");
+		}
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

@@ -1,6 +1,6 @@
 #include "ultpch.h"
 #include "Application.h"
-#include "GLFW/glfw3.h"
+#include <glad/glad.h>
 #include "Platform/Windows/WindowsWindow.h"
 
 namespace Ultra {
