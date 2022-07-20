@@ -9,13 +9,17 @@ workspace "Ultra"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Ultra/vendor/GLFW/include"
+
+include "Ultra/vendor/GLFW"
 
 project "Ultra"
 	location "Ultra"
 	kind "SharedLib"
 	language "C++"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "ultpch.h"
 	pchsource "Ultra/src/ultpch.cpp"
@@ -27,13 +31,19 @@ project "Ultra"
 
 	includedirs{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 
 		defines{
 			"ULT_PLATFORM_WINDOWS",
@@ -59,7 +69,7 @@ project "SandBox"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files{
 		"%{prj.name}/src/**.h",
