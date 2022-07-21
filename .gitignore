@@ -8,3 +8,9 @@
 bin/
 bin-int/
 **/bin
+*.vcxproj
+*.filters
+*.vcxproj.filters
+*.vcxproj.user
+*.user
+*.sln
