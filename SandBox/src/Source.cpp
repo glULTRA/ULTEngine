@@ -24,6 +24,7 @@ class SandBox : public Ultra::Application {
 public:
 	SandBox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Ultra::ImGuiLayer());
 	}
 
 	~SandBox() {
