@@ -7,3 +7,4 @@
 [submodule "Ultra/vendor/ImGui"]
 	path = Ultra/vendor/ImGui
 	url = https://github.com/TheCherno/imgui.git
+	ignore = dirty
