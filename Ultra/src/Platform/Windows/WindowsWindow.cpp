@@ -150,6 +150,14 @@ namespace Ultra {
 				data.EventCallback(e);
 			}
 		);
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int codepoint)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				KeyTypedEvent e(codepoint);
+				data.EventCallback(e);
+			}
+		);
 	}
 
 	void WindowsWindow::Shutdown() {
