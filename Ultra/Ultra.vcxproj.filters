@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="Ultra\Events">
       <UniqueIdentifier>{B1A728E1-9D0A-B885-4690-F03B32D28308}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ultra\ImGui">
+      <UniqueIdentifier>{57AB3483-C360-AD78-4C55-A74FB809A47C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRender.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\Ultra\Events\MouseEvent.h">
       <Filter>Ultra\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ultra\ImGui\ImGuiLayer.h">
+      <Filter>Ultra\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Ultra\Layer.h">
       <Filter>Ultra</Filter>
     </ClInclude>
@@ -55,11 +67,17 @@
     <ClInclude Include="src\ultpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRender.h.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Ultra\Application.cpp">
       <Filter>Ultra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ultra\ImGui\ImGuiLayer.cpp">
+      <Filter>Ultra\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Ultra\Layer.cpp">
       <Filter>Ultra</Filter>
