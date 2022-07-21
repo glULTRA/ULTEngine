@@ -21,6 +21,8 @@ include "Ultra/vendor/ImGui"
 project "Ultra"
 	location "Ultra"
 	kind "SharedLib"
+	staticruntime "off"
+
 	language "C++"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -52,7 +54,6 @@ project "Ultra"
 
 	filter "system:windows"
 		cppdialect "C++20"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines{
@@ -62,24 +63,25 @@ project "Ultra"
 		}
 
 		postbuildcommands{
-			("{copy} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandBox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 	filter "configurations:Debug"
 		defines "ULT_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		optimize  "On"
 	filter "configurations:Release"
 		defines "ULT_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize  "On"
 	filter "configurations:Dist"
 		defines "ULT_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize  "On"
 
 project "SandBox"
 	location "SandBox"
 	kind "ConsoleApp"
+	staticruntime "off"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -97,8 +99,7 @@ project "SandBox"
 
 	filter "system:windows"
 		cppdialect "C++20"
-		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 
 		defines{
 			"ULT_PLATFORM_WINDOWS"
@@ -110,13 +111,13 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "ULT_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		optimize  "On"
 	filter "configurations:Release"
 		defines "ULT_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize  "On"
 	filter "configurations:Dist"
 		defines "ULT_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize  "On"
