@@ -10,11 +10,16 @@
 	#error ULT Supports windows for now!
 #endif
 
+#ifdef ULT_DEBUG
+	#define ULT_ENABLE_ASSERTS
+#endif
+
 #ifdef ULT_ENABLE_ASSERTS
-	#define ULT_ASSERT(x, ...) {}
+	#define HZ_ASSERT(x, ...) { if(!(x)) { HZ_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define HZ_CORE_ASSERT(x, ...) { if(!(x)) { HZ_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
-	#define ULT_ASSERT(x, ...)
-	#define ULT_CORE_ASSERT(x, ...)
+	#define HZ_ASSERT(x, ...)
+	#define HZ_CORE_ASSERT(x, ...)
 #endif
 
 #define BIT(x) (1 << x)
