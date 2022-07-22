@@ -11,12 +11,21 @@ public:
 
 	void OnUpdate() override {
 		//ULT_INFO("My update");
+		
 	}
 
 	void OnEvent(Ultra::Event& e) override
 	{
 		//std::cout << e.ToString() << std::endl;
 		ULT_WARN("{0}", e.ToString());
+
+		if (e.GetEventType() == Ultra::EventType::KeyPressed) {
+			Ultra::KeyPressedEvent& keyEvent = (Ultra::KeyPressedEvent&)e;
+			if (keyEvent.GetKeyCode() == ULT_KEY_A)
+			{
+				ULT_TRACE("A has been pressed!");
+			}
+		}
 	}
 };
 

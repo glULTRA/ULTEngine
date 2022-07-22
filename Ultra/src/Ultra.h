@@ -8,6 +8,9 @@
 #include "Ultra/Layer.h"
 #include "Ultra/Log.h"
 #include "Ultra/ImGui/ImGuiLayer.h"
+#include "Ultra/Input.h"
+#include "Ultra/KeyCode.h"
+#include "Ultra/MouseButton.h"
 
 // The entry point.
 #include	"Ultra/EntryPoint.h"
