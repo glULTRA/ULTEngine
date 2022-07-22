@@ -25,6 +25,8 @@ namespace Ultra {
 
 		bool IsRunning() const override { return !glfwWindowShouldClose(m_Window); };
 
+		inline virtual void* GetNativeWindow() const override { return m_Window; }
+
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();

@@ -2,6 +2,7 @@
 #include "Application.h"
 #include <glad/glad.h>
 #include "Platform/Windows/WindowsWindow.h"
+#include "Input.h"
 
 namespace Ultra {
 
@@ -25,6 +26,9 @@ namespace Ultra {
 			for (auto layer : m_LayerStack) {
 				layer->OnUpdate();
 			}
+
+			/*auto [x, y] = Input::GetMousePosition();
+			ULT_CORE_WARN("{0}, {1}", x, y);*/
 
 			m_Window->OnUpdate();
 		}

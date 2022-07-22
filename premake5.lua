@@ -1,6 +1,6 @@
 workspace "Ultra"
 	architecture  "x64"
-
+	startproject "SandBox"
 	configurations{
 		"Debug",
 		"Release",
